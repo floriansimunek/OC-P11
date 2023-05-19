@@ -1,10 +1,25 @@
 import "./App.css";
-import Tag from "./components/Tag";
+import TagsList from "./components/TagsList";
+
+const TAGS = [
+	{
+		name: "Test 1",
+	},
+	{
+		name: "Test 2",
+	},
+	{
+		name: "Test 3",
+	},
+	{
+		name: "Test 4",
+	},
+];
 
 function App() {
 	return (
 		<div className="App">
-			<Tag name="test" />
+			<TagsList tags={TAGS} />
 		</div>
 	);
 }
