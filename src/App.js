@@ -1,27 +1,10 @@
 import "./App.css";
-import TagsList from "./components/TagsList";
+import Header from "./components/Header";
 
-const TAGS = [
-	{
-		name: "Test 1",
-	},
-	{
-		name: "Test 2",
-	},
-	{
-		name: "Test 3",
-	},
-	{
-		name: "Test 4",
-	},
-];
-
-function App() {
+export default function App() {
 	return (
 		<div className="App">
-			<TagsList tags={TAGS} />
+			<Header />
 		</div>
 	);
 }
-
-export default App;

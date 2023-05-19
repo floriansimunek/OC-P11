@@ -1,0 +1,39 @@
+header {
+	width: 90%;
+	margin: 30px auto 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@media screen and (max-width: 667px) {
+		margin: 20px auto 40px;
+	}
+
+	img {
+		@media screen and (max-width: 667px) {
+			width: auto;
+			height: 47px;
+		}
+	}
+
+	li {
+		list-style: none;
+		display: flex;
+		gap: 30px;
+
+		@media screen and (max-width: 667px) {
+			gap: 10px;
+		}
+
+		a {
+			color: #ff6060;
+			font-size: 24px;
+			font-weight: 500;
+			line-height: 142%;
+
+			@media screen and (max-width: 667px) {
+				font-size: 12px;
+			}
+		}
+	}
+}
