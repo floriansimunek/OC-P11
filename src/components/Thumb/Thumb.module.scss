@@ -1,0 +1,33 @@
+.thumbs {
+	width: 340px;
+	height: 340px;
+	background: #ff6060;
+	border-radius: 10px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+	position: relative;
+	overflow: hidden;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0) 0%,
+			rgba(0, 0, 0, 0.5) 100%
+		);
+		z-index: 0;
+	}
+
+	.title {
+		color: white;
+		width: 30%;
+		margin: 0 0 20px 20px;
+		z-index: 1;
+	}
+}
