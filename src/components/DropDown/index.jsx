@@ -1,7 +1,7 @@
 import styles from "./DropDown.module.scss";
 import { useState } from "react";
 
-export default function DropDown() {
+export default function DropDown({ title, text }) {
 	const [showText, setShowText] = useState(false);
 
 	function handleClick() {
@@ -11,15 +11,9 @@ export default function DropDown() {
 	return (
 		<div className={styles.dropDown}>
 			<p className={styles.title} onClick={handleClick}>
-				Respect
+				{title}
 			</p>
-			{showText ? (
-				<p className={styles.text}>
-					La bienveillance fait partie des valeurs fondatrices de
-					Kasa. Tout comportement discriminatoire ou de perturbation
-					du voisinage entraînera une exclusion de notre plateforme.
-				</p>
-			) : null}
+			{showText ? <p className={styles.text}>{text}</p> : null}
 		</div>
 	);
 }
