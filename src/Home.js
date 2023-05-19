@@ -1,4 +1,4 @@
-import "./App.css";
+import "./Home.css";
 import Header from "./components/Header";
 import HomeBanner from "./components/HomeBanner";
 import ThumbsList from "./components/ThumbsList";
