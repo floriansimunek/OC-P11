@@ -1,8 +1,6 @@
-import "./Home.css";
-import Header from "./components/Header";
-import HomeBanner from "./components/HomeBanner";
-import ThumbsList from "./components/ThumbsList";
-import Footer from "./components/Footer";
+import "./Home.module.scss";
+import HomeBanner from "../../components/HomeBanner";
+import ThumbsList from "../../components/ThumbsList";
 
 const THUMBS = [
 	{
@@ -31,15 +29,13 @@ const THUMBS = [
 	},
 ];
 
-export default function App() {
+export default function Home() {
 	return (
 		<>
-			<Header />
 			<main>
 				<HomeBanner />
 				<ThumbsList thumbs={THUMBS} />
 			</main>
-			<Footer />
 		</>
 	);
 }
