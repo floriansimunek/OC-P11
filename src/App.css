@@ -1,4 +1,5 @@
-.App {
-	background-color: #fff;
+main {
+	flex: 1;
+	background: red;
 }
 
