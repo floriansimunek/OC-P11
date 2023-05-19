@@ -4,8 +4,8 @@ import Thumb from "../Thumb";
 export default function ThumbsList({ thumbs }) {
 	return (
 		<div className={styles.thumbsList}>
-			{thumbs.map((thumb) => (
-				<Thumb title={thumb.title} />
+			{thumbs.map((thumb, k) => (
+				<Thumb title={thumb.title} key={k} />
 			))}
 		</div>
 	);
