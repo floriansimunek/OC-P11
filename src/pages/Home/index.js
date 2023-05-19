@@ -1,5 +1,5 @@
 import "./Home.module.scss";
-import HomeBanner from "../../components/HomeBanner";
+import Banner from "../../components/Banner";
 import ThumbsList from "../../components/ThumbsList";
 
 const THUMBS = [
@@ -33,7 +33,7 @@ export default function Home() {
 	return (
 		<>
 			<main>
-				<HomeBanner />
+				<Banner />
 				<ThumbsList thumbs={THUMBS} />
 			</main>
 		</>
