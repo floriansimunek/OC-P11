@@ -21,12 +21,16 @@ const slideImages = [
 const properties = {
 	prevArrow: (
 		<button className={styles.arrowsBtn}>
-			<img className={`${styles.chevron} ${styles.left}`} src={chevron} />
+			<img
+				className={`${styles.chevron} ${styles.left}`}
+				src={chevron}
+				alt="Chevron Icon"
+			/>
 		</button>
 	),
 	nextArrow: (
 		<button className={styles.arrowsBtn}>
-			<img className={styles.chevron} src={chevron} />
+			<img className={styles.chevron} src={chevron} alt="Chevron Icon" />
 		</button>
 	),
 	transitionDuration: "300",

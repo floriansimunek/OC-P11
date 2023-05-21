@@ -4,8 +4,8 @@ import Tag from "../Tag";
 export default function TagsList({ tags }) {
 	return (
 		<div className={styles.tagsList}>
-			{tags.map((tag) => (
-				<Tag name={tag.name} />
+			{tags.map((tag, k) => (
+				<Tag name={tag.name} key={k} />
 			))}
 		</div>
 	);
