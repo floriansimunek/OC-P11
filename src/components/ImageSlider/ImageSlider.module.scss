@@ -1,0 +1,31 @@
+.slider {
+	width: 90%;
+	margin: 30px auto;
+	border-radius: 25px;
+	overflow: hidden;
+	position: relative;
+
+	.slides {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 415px;
+		background-size: cover;
+		border-radius: 25px;
+	}
+
+	.arrowsBtn {
+		background: none;
+		border: none;
+		margin: 0 20px;
+
+		.chevron {
+			width: 100px;
+			height: auto;
+
+			&.left {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}

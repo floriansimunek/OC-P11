@@ -1,0 +1,15 @@
+.indicators {
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+
+	.indicator {
+		display: none;
+		font-size: 24px;
+		color: white;
+
+		&.active {
+			display: block;
+		}
+	}
+}

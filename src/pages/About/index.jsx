@@ -1,4 +1,3 @@
-import styles from "./About.module.scss";
 import Banner from "../../components/Banner";
 import DropDownsList from "../../components/DropDownsList";
 
