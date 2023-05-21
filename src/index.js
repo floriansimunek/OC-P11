@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 /* PAGES */
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Lease from "./pages/Lease";
 import Error404 from "./pages/404";
 
 /* DEPENDANCIES */
@@ -24,6 +25,7 @@ root.render(
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/about" element={<About />} />
+				<Route path="/lease/:id" element={<Lease />} />
 				<Route path="*" element={<Error404 />} />
 			</Routes>
 			<Footer />

@@ -1,9 +1,10 @@
 import styles from "./Thumb.module.scss";
+import { Link } from "react-router-dom";
 
-export default function Thumb({ title }) {
+export default function Thumb({ title, id }) {
 	return (
-		<div className={styles.thumbs}>
+		<Link to={"/lease/" + id} className={styles.thumbs}>
 			<p className={styles.title}>{title}</p>
-		</div>
+		</Link>
 	);
 }
