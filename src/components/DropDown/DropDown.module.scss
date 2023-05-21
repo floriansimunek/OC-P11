@@ -14,6 +14,7 @@
 		font-size: 24px;
 		font-weight: 500;
 		line-height: 142%;
+		position: relative;
 
 		&:hover {
 			cursor: pointer;
@@ -22,6 +23,19 @@
 
 		@media screen and (max-width: 667px) {
 			font-size: 13px;
+		}
+
+		.chevron {
+			position: absolute;
+			top: 50%;
+			right: 30px;
+			transform: translateY(-50%) rotate(-90deg);
+			width: 30px;
+			height: auto;
+
+			&.open {
+				transform: translateY(-50%) rotate(90deg);
+			}
 		}
 	}
 
