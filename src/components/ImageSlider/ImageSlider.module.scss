@@ -12,6 +12,11 @@
 		height: 415px;
 		background-size: cover;
 		border-radius: 25px;
+
+		@media screen and (max-width: 667px) {
+			height: 225px;
+			background-position: 50%;
+		}
 	}
 
 	.arrowsBtn {
@@ -19,9 +24,17 @@
 		border: none;
 		margin: 0 20px;
 
+		@media screen and (max-width: 667px) {
+			margin: 0;
+		}
+
 		.chevron {
 			width: 100px;
 			height: auto;
+
+			@media screen and (max-width: 667px) {
+				width: 30px;
+			}
 
 			&.left {
 				transform: rotate(180deg);
