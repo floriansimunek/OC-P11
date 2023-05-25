@@ -8,3 +8,23 @@
 	flex-wrap: wrap;
 	width: 90%;
 }
+
+.flexDirection {
+	&_row {
+		flex-direction: row;
+	}
+
+	&_column {
+		flex-direction: column;
+	}
+}
+
+.alignItems {
+	&_start {
+		align-items: flex-start;
+	}
+
+	&_center {
+		align-items: center;
+	}
+}
