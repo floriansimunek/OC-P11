@@ -1,8 +1,12 @@
 import "./Home.module.scss";
 import Banner from "../../components/Banner";
 import ThumbsList from "../../components/ThumbsList";
+import backgroundImage from "../../assets/img/home_banner.png";
 
 const THUMBS = [
+	{
+		title: "Titre de la location 00",
+	},
 	{
 		title: "Titre de la location 01",
 	},
@@ -24,16 +28,13 @@ const THUMBS = [
 	{
 		title: "Titre de la location 07",
 	},
-	{
-		title: "Titre de la location 08",
-	},
 ];
 
 export default function Home() {
 	return (
 		<>
 			<main>
-				<Banner />
+				<Banner backgroundImage={backgroundImage} text="Chez vous, partout et ailleurs" />
 				<ThumbsList thumbs={THUMBS} />
 			</main>
 		</>

@@ -1,5 +1,6 @@
 import Banner from "../../components/Banner";
 import DropDownsList from "../../components/DropDownsList";
+import backgroundImage from "../../assets/img/about_banner.png";
 
 const DROP_DOWNS = [
 	{
@@ -23,7 +24,7 @@ const DROP_DOWNS = [
 export default function About() {
 	return (
 		<main>
-			<Banner />
+			<Banner backgroundImage={backgroundImage} />
 			<DropDownsList DropDowns={DROP_DOWNS} />
 		</main>
 	);
