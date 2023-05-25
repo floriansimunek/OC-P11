@@ -1,3 +1,6 @@
+import slide1 from "../../assets/img/slide.png";
+import slide2 from "../../assets/img/home_banner.png";
+import slide3 from "../../assets/img/about_banner.png";
 import ImageSlider from "../../components/ImageSlider";
 import LeaseInformations from "../../components/LeaseInformations";
 
@@ -25,9 +28,11 @@ export default function Lease() {
 		},
 	];
 
+	const images = [slide1, slide2, slide3];
+
 	return (
 		<main>
-			<ImageSlider />
+			<ImageSlider images={images} />
 			<LeaseInformations
 				title="Cozy loft on the Canal Saint-Martin"
 				location="Paris, Île-de-France"

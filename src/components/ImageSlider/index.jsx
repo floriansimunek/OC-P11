@@ -1,61 +1,27 @@
+import { useState } from "react";
 import styles from "./ImageSlider.module.scss";
-import "./slider.scss";
-import slides from "../../assets/img/slide.png";
 import chevron from "../../assets/chevron-icon.svg";
-import React from "react";
-import { Slide } from "react-slideshow-image";
-import "react-slideshow-image/dist/styles.css";
 
-const slideImages = [
-	{
-		url: slides,
-	},
-	{
-		url: slides,
-	},
-	{
-		url: slides,
-	},
-];
+export default function ImageSlider({ images }) {
+	const [currentIndex, setCurrentIndex] = useState(0);
 
-const properties = {
-	prevArrow: (
-		<button className={styles.arrowsBtn}>
-			<img
-				className={`${styles.chevron} ${styles.left}`}
-				src={chevron}
-				alt="Chevron Icon"
-			/>
-		</button>
-	),
-	nextArrow: (
-		<button className={styles.arrowsBtn}>
-			<img className={styles.chevron} src={chevron} alt="Chevron Icon" />
-		</button>
-	),
-	transitionDuration: "300",
-	easing: "ease",
-};
+	const nextSlide = () => {
+		setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+	};
 
-const indicators = (index) => (
-	<div className="indicator">{index + 1 + `/${slideImages.length}`}</div>
-);
+	const previousSlide = () => {
+		setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+	};
 
-export default function ImageSlider() {
 	return (
-		<div className={styles.slider}>
-			<Slide {...properties} indicators={indicators}>
-				{slideImages.map((slideImage, index) => (
-					<div key={index}>
-						<div
-							className={styles.slides}
-							style={{
-								backgroundImage: `url(${slideImage.url})`,
-							}}
-						></div>
-					</div>
-				))}
-			</Slide>
+		<div className={styles.imageSlider}>
+			<button className={`${styles.buttons} ${styles.left}`} onClick={previousSlide}>
+				<img className={`${styles.chevron} ${styles.chevronLeft}`} src={chevron} alt="Chevron Icon" />
+			</button>
+			<img className={styles.slideImage} src={images[currentIndex]} alt="Slider Image" />
+			<button className={`${styles.buttons} ${styles.right}`} onClick={nextSlide}>
+				<img className={styles.chevron} src={chevron} alt="Chevron Icon" />
+			</button>
 		</div>
 	);
 }
