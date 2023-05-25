@@ -52,10 +52,17 @@
 		line-height: 142%;
 		padding: 20px;
 		text-align: justify;
-		list-style: none;
+
+		ul {
+			list-style: none;
+		}
 
 		@media screen and (max-width: 667px) {
 			font-size: 12px;
 		}
 	}
+}
+
+.rowDropDown {
+	width: calc(50% - 15px);
 }
