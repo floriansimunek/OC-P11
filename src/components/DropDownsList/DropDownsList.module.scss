@@ -9,22 +9,24 @@
 	width: 90%;
 }
 
-.flexDirection {
-	&_row {
-		flex-direction: row;
+@media screen and (min-width: 667px) {
+	.flexDirection {
+		&_row {
+			flex-direction: row;
+		}
+
+		&_column {
+			flex-direction: column;
+		}
 	}
 
-	&_column {
-		flex-direction: column;
-	}
-}
+	.alignItems {
+		&_start {
+			align-items: flex-start;
+		}
 
-.alignItems {
-	&_start {
-		align-items: flex-start;
-	}
-
-	&_center {
-		align-items: center;
+		&_center {
+			align-items: center;
+		}
 	}
 }
