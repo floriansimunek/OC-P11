@@ -16,6 +16,12 @@
 		justify-content: flex-start;
 	}
 
+	&.big {
+		@media screen and (max-width: 667px) {
+			height: 225px;
+		}
+	}
+
 	&:after {
 		content: "";
 		position: absolute;

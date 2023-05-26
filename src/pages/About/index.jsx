@@ -24,7 +24,7 @@ const DROP_DOWNS = [
 export default function About() {
 	return (
 		<main>
-			<Banner backgroundImage={backgroundImage} />
+			<Banner backgroundImage={backgroundImage} size="big" />
 			<DropDownsList DropDowns={DROP_DOWNS} />
 		</main>
 	);
