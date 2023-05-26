@@ -7,7 +7,7 @@ export default function Banner({ backgroundImage, text, size }) {
 
 	return (
 		<div className={`${styles.banner} ${size === "big" ? styles.big : ""}`} style={bannerStyle}>
-			{text && <p className={styles.title}>{text}</p>}
+			{text && <h2 className={styles.title}>{text}</h2>}
 		</div>
 	);
 }

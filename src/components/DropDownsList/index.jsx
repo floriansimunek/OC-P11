@@ -7,10 +7,12 @@ export default function DropDownsList({ DropDowns, type }) {
 	${type === "row" ? styles.alignItems_start : styles.alignItems_center}`;
 
 	return (
-		<div className={dropdownListClassName}>
+		<ul className={dropdownListClassName}>
 			{DropDowns.map((dropDown, k) => (
-				<DropDown title={dropDown.title} text={dropDown.text} lis={dropDown.lis} type={type} key={k} />
+				<li>
+					<DropDown title={dropDown.title} text={dropDown.text} lis={dropDown.lis} type={type} key={k} />
+				</li>
 			))}
-		</div>
+		</ul>
 	);
 }

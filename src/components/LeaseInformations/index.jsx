@@ -9,8 +9,8 @@ export default function LeaseInformations({ title, location, owner, TAGS, DROP_D
 			<div className={styles.informations}>
 				<div className={styles.left}>
 					<div className={styles.top}>
-						<p className={styles.title}>{title}</p>
-						<p className={styles.location}>{location}</p>
+						<h1 className={styles.title}>{title}</h1>
+						<h2 className={styles.location}>{location}</h2>
 					</div>
 					<div className={styles.bot}>
 						<TagsList tags={TAGS} />
@@ -18,7 +18,7 @@ export default function LeaseInformations({ title, location, owner, TAGS, DROP_D
 				</div>
 				<div className={styles.right}>
 					<div className={styles.top}>
-						<div className={styles.owner}>{owner}</div>
+						<p className={styles.owner}>{owner}</p>
 						<div className={styles.profilePicture}></div>
 					</div>
 					<div className={styles.bot}>

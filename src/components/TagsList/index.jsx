@@ -3,10 +3,12 @@ import Tag from "../Tag";
 
 export default function TagsList({ tags }) {
 	return (
-		<div className={styles.tagsList}>
+		<ul className={styles.tagsList}>
 			{tags.map((tag, k) => (
-				<Tag name={tag.name} key={k} />
+				<li>
+					<Tag name={tag.name} key={k} />
+				</li>
 			))}
-		</div>
+		</ul>
 	);
 }
