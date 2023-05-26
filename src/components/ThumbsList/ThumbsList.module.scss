@@ -1,14 +1,13 @@
 .thumbsList {
 	width: 90%;
 	margin: 40px auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+	justify-content: flex-start;
+	grid-gap: 60px;
 	background: #f6f6f6;
 	border-radius: 25px;
 	padding: 50px;
-	gap: 60px;
 
 	@media screen and (max-width: 667px) {
 		flex-direction: column;
