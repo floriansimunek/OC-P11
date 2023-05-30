@@ -3,14 +3,14 @@ import TagsList from "../TagsList";
 import StarsList from "../StarsList";
 import DropDownsList from "../DropDownsList";
 
-export default function LeaseInformations({ title, location, owner, TAGS, DROP_DOWNS }) {
+export default function LeaseInformations({ lease, TAGS, DROP_DOWNS }) {
 	return (
 		<>
 			<div className={styles.informations}>
 				<div className={styles.left}>
 					<div className={styles.top}>
-						<h1 className={styles.title}>{title}</h1>
-						<h2 className={styles.location}>{location}</h2>
+						<h1 className={styles.title}>{lease.title}</h1>
+						<h2 className={styles.location}>{lease.location}</h2>
 					</div>
 					<div className={styles.bot}>
 						<TagsList tags={TAGS} />
@@ -18,11 +18,11 @@ export default function LeaseInformations({ title, location, owner, TAGS, DROP_D
 				</div>
 				<div className={styles.right}>
 					<div className={styles.top}>
-						<p className={styles.owner}>{owner}</p>
-						<div className={styles.profilePicture}></div>
+						<p className={styles.owner}>{lease.host.name}</p>
+						<img src={lease.host.picture} className={styles.profilePicture}></img>
 					</div>
 					<div className={styles.bot}>
-						<StarsList stars={3} />
+						<StarsList stars={lease.rating} />
 					</div>
 				</div>
 			</div>
