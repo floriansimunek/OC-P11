@@ -5,8 +5,8 @@ export default function ThumbsList({ thumbs }) {
 	return (
 		<ul className={styles.thumbsList}>
 			{thumbs.map((thumb, k) => (
-				<li>
-					<Thumb title={thumb.title} id={k} key={k} />
+				<li key={k}>
+					<Thumb title={thumb.title} id={k} />
 				</li>
 			))}
 		</ul>
