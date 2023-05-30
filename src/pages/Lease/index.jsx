@@ -9,7 +9,6 @@ const datas = await API.fetchData();
 export default function Lease() {
 	const { id } = useParams();
 	const lease = datas.find((lease) => lease.id === id);
-	console.log(lease);
 
 	const TAGS = [];
 	const IMAGES = [];

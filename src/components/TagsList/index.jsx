@@ -5,8 +5,8 @@ export default function TagsList({ tags }) {
 	return (
 		<ul className={styles.tagsList}>
 			{tags.map((tag, k) => (
-				<li>
-					<Tag name={tag.name} key={k} />
+				<li key={k}>
+					<Tag name={tag.name} />
 				</li>
 			))}
 		</ul>

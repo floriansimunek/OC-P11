@@ -9,8 +9,8 @@ export default function DropDownsList({ DropDowns, type }) {
 	return (
 		<ul className={dropdownListClassName}>
 			{DropDowns.map((dropDown, k) => (
-				<li>
-					<DropDown title={dropDown.title} text={dropDown.text} lis={dropDown.lis} type={type} key={k} />
+				<li key={k}>
+					<DropDown title={dropDown.title} text={dropDown.text} lis={dropDown.lis} type={type} />
 				</li>
 			))}
 		</ul>
