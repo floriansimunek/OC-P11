@@ -1,33 +1,42 @@
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import ImageSlider from "../../components/ImageSlider";
 import LeaseInformations from "../../components/LeaseInformations";
-import { useParams } from "react-router-dom";
 import Api from "../../utils/Api";
 
 const API = new Api();
-const datas = await API.fetchData();
 
 export default function Lease() {
 	const { id } = useParams();
-	const lease = datas.find((lease) => lease.id === id);
+	const [lease, setLease] = useState(null);
 
-	const TAGS = [];
-	const IMAGES = [];
-	const DROP_DOWNS = [];
+	useEffect(() => {
+		async function fetchData() {
+			try {
+				const datas = await API.fetchData();
+				const selectedLease = datas.find((lease) => lease.id === id);
+				setLease(selectedLease);
+			} catch (error) {
+				console.error("Error fetching data:", error);
+			}
+		}
 
-	lease.tags.forEach((tag) => {
-		TAGS.push({ name: tag });
-	});
+		fetchData();
+	}, [id]);
 
-	lease.pictures.forEach((picture) => {
-		IMAGES.push(picture);
-	});
+	if (lease) {
+		const TAGS = lease.tags.map((tag) => ({ name: tag }));
+		const IMAGES = [...lease.pictures];
+		const DROP_DOWNS = [
+			{ title: "Description", text: lease.description },
+			{ title: "Équipements", lis: lease.equipments },
+		];
 
-	DROP_DOWNS.push({ title: "Description", text: lease.description }, { title: "Équipements", lis: lease.equipments });
-
-	return (
-		<main>
-			<ImageSlider IMAGES={IMAGES} />
-			<LeaseInformations lease={lease} TAGS={TAGS} DROP_DOWNS={DROP_DOWNS} />
-		</main>
-	);
+		return (
+			<main>
+				<ImageSlider IMAGES={IMAGES} />
+				<LeaseInformations lease={lease} TAGS={TAGS} DROP_DOWNS={DROP_DOWNS} />
+			</main>
+		);
+	}
 }
