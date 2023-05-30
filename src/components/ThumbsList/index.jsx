@@ -4,9 +4,9 @@ import Thumb from "../Thumb";
 export default function ThumbsList({ thumbs }) {
 	return (
 		<ul className={styles.thumbsList}>
-			{thumbs.map((thumb, k) => (
-				<li key={k}>
-					<Thumb title={thumb.title} id={k} />
+			{thumbs.map((thumb) => (
+				<li key={thumb.id}>
+					<Thumb title={thumb.title} backgroundImage={thumb.cover} id={thumb.id} />
 				</li>
 			))}
 		</ul>
