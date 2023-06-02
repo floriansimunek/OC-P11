@@ -2,6 +2,14 @@ import styles from "./DropDown.module.scss";
 import chevronIcon from "../../assets/chevron-icon.svg";
 import { useState } from "react";
 
+/**
+ * Dropdown element with title and description or list
+ * @param {string} title Title of the Lease
+ * @param {string} [text] Description of the Lease
+ * @param {string} [lis] List of equipments of the Lease
+ * @param {string} [type] One or two DropDown per lines
+ * @returns {JSX.Element} DropDown Element
+ */
 export default function DropDown({ title, text, lis, type }) {
 	const [showText, setShowText] = useState(false);
 
