@@ -7,14 +7,14 @@ import Api from "../../utils/Api";
 const API = new Api();
 
 export default function Lease() {
-	const { id } = useParams();
+	const { id: leaseId } = useParams();
 	const [lease, setLease] = useState(null);
 
 	useEffect(() => {
 		async function fetchData() {
 			try {
 				const datas = await API.fetchData();
-				const selectedLease = datas.find((lease) => lease.id === id);
+				const selectedLease = datas.find((lease) => lease.id === leaseId);
 				setLease(selectedLease);
 			} catch (error) {
 				console.error("Error fetching data:", error);
@@ -22,7 +22,7 @@ export default function Lease() {
 		}
 
 		fetchData();
-	}, [id]);
+	}, [leaseId]);
 
 	if (lease) {
 		const TAGS = lease.tags.map((tag) => ({ name: tag }));
