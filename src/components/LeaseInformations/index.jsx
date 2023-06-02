@@ -3,6 +3,14 @@ import TagsList from "../TagsList";
 import StarsList from "../StarsList";
 import DropDownsList from "../DropDownsList";
 
+/**
+ * Lease informations : Title, description, host ...etc
+ * @param {Object} lease Lease object from id (params)
+ * @param {Array<TAGS>} TAGS Tags of the lease
+ * @param {Array<DROP_DOWNS>} DROP_DOWNS DropDowns of the lease
+ * @returns {JSX.Element} LeaseInformations Element
+ */
+
 export default function LeaseInformations({ lease, TAGS, DROP_DOWNS }) {
 	return (
 		<>
