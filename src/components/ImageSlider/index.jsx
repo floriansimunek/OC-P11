@@ -2,6 +2,12 @@ import { useState } from "react";
 import styles from "./ImageSlider.module.scss";
 import chevron from "../../assets/chevron-icon.svg";
 
+/**
+ * ImageSlider with X images
+ * @param {Array<string>} IMAGES Array of images URL
+ * @returns {JSX.Element} ImageSlider Element
+ */
+
 export default function ImageSlider({ IMAGES }) {
 	const [currentIndex, setCurrentIndex] = useState(0);
 
