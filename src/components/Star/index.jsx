@@ -1,5 +1,10 @@
 import styles from "./Star.module.scss";
 
+/**
+ * Star element, red or gray
+ * @param {string} color Color of the star
+ * @returns {JSX.Element} Star Element
+ */
 export default function Star({ color }) {
 	return (
 		<svg className={styles.star} width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
