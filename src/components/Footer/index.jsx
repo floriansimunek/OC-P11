@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import styles from "./Footer.module.scss";
 import logo from "../../assets/logo_bw.svg";
 
+/**
+ * Footer Element for pages
+ * @returns {JSX.Element} Footer Element
+ */
 export default function Footer() {
 	return (
 		<footer>
