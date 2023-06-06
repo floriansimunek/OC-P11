@@ -10,6 +10,17 @@ const config = {
 		autodocs: "tag",
 	},
 	staticDirs: ["..\\public"],
+	storiesSort: (a, b) => {
+		const nameA = a[1].kind.toLowerCase();
+		const nameB = b[1].kind.toLowerCase();
+		if (nameA < nameB) {
+			return -1;
+		}
+		if (nameA > nameB) {
+			return 1;
+		}
+		return 0;
+	},
 };
 export default config;
 
