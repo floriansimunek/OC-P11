@@ -1,7 +1,7 @@
 import Header from "./index";
 import { BrowserRouter } from "react-router-dom";
 
-export default {
+const HeaderStory = {
 	title: "UI/Header",
 	component: Header,
 	tags: ["autodocs"],
@@ -9,6 +9,8 @@ export default {
 		layout: "fullscreen",
 	},
 };
+
+export default HeaderStory;
 
 export const Default = () => (
 	<BrowserRouter>

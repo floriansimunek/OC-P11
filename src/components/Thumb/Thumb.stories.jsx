@@ -1,7 +1,7 @@
 import Thumb from "./index";
 import { BrowserRouter } from "react-router-dom";
 
-export default {
+const ThumbStory = {
 	title: "UI/Thumb",
 	component: Thumb,
 	tags: ["autodocs"],
@@ -48,6 +48,8 @@ export default {
 		},
 	},
 };
+
+export default ThumbStory;
 
 export const Default = ({ id, title, cover }) => (
 	<BrowserRouter>

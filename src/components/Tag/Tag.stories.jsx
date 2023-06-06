@@ -1,6 +1,6 @@
 import Tag from "./index";
 
-export default {
+const TagStory = {
 	title: "UI/Tag",
 	component: Tag,
 	tags: ["autodocs"],
@@ -21,5 +21,7 @@ export default {
 		},
 	},
 };
+
+export default TagStory;
 
 export const Default = ({ name }) => <Tag name={name} />;

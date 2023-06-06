@@ -1,7 +1,7 @@
 import ThumbsList from "./index";
 import { BrowserRouter } from "react-router-dom";
 
-export default {
+const ThumbsListStory = {
 	title: "UI/ThumbsList",
 	component: ThumbsList,
 	tags: ["autodocs"],
@@ -38,6 +38,8 @@ export default {
 		},
 	},
 };
+
+export default ThumbsListStory;
 
 export const Default = ({ thumbs }) => (
 	<BrowserRouter>

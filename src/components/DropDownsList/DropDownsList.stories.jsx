@@ -1,8 +1,7 @@
-import DropDown from "../DropDown";
 import DropDownsList from "./index";
 import { BrowserRouter } from "react-router-dom";
 
-export default {
+const DropDownsListStory = {
 	title: "UI/DropDownsList",
 	component: DropDownsList,
 	tags: ["autodocs"],
@@ -45,6 +44,8 @@ export default {
 		},
 	},
 };
+
+export default DropDownsListStory;
 
 export const Default = ({ DropDowns, type }) => {
 	let dropDownsListType;

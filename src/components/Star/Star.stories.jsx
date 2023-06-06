@@ -1,7 +1,7 @@
 import React from "react";
 import Star from "./index";
 
-export default {
+const StarStory = {
 	title: "UI/Star",
 	component: Star,
 	tags: ["autodocs"],
@@ -22,6 +22,8 @@ export default {
 		},
 	},
 };
+
+export default StarStory;
 
 export const Default = ({ isActive }) => {
 	let color;

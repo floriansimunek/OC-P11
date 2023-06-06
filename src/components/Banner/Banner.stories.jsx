@@ -2,7 +2,7 @@ import Banner from "./index";
 import backgroundImage1 from "../../assets/img/home_banner.png";
 import backgroundImage2 from "../../assets/img/about_banner.png";
 
-export default {
+const BannerStory = {
 	title: "UI/Banner",
 	component: Banner,
 	tags: ["autodocs"],
@@ -45,6 +45,8 @@ export default {
 		},
 	},
 };
+
+export default BannerStory;
 
 export const Default = ({ backgroundImage, text, size }) => {
 	let bannerSize;

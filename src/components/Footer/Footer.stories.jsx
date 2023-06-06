@@ -1,7 +1,7 @@
 import Footer from "./index";
 import { BrowserRouter } from "react-router-dom";
 
-export default {
+const FooterStory = {
 	title: "UI/Footer",
 	component: Footer,
 	tags: ["autodocs"],
@@ -9,6 +9,8 @@ export default {
 		layout: "fullscreen",
 	},
 };
+
+export default FooterStory;
 
 export const Default = () => (
 	<BrowserRouter>

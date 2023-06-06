@@ -1,7 +1,7 @@
 import React from "react";
 import ImageSlider from "./index";
 
-export default {
+const ImageSliderStory = {
 	title: "UI/ImageSlider",
 	component: ImageSlider,
 	tags: ["autodocs"],
@@ -27,6 +27,8 @@ export default {
 		},
 	},
 };
+
+export default ImageSliderStory;
 
 export const Default = ({ pictures }) => {
 	return <ImageSlider IMAGES={pictures} />;

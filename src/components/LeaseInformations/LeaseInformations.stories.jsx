@@ -2,7 +2,7 @@ import React from "react";
 import LeaseInformations from "./index";
 import { BrowserRouter } from "react-router-dom";
 
-export default {
+const LeaseInformationsStory = {
 	title: "UI/LeaseInformations",
 	component: LeaseInformations,
 	tags: ["autodocs"],
@@ -68,6 +68,8 @@ export default {
 		},
 	},
 };
+
+export default LeaseInformationsStory;
 
 export const Default = ({ lease, TAGS, DROP_DOWNS }) => {
 	return (

@@ -1,7 +1,7 @@
 import React from "react";
 import StarsList from "./index";
 
-export default {
+const StarsListStory = {
 	title: "UI/StarsList",
 	component: StarsList,
 	tags: ["autodocs"],
@@ -28,6 +28,8 @@ export default {
 		},
 	},
 };
+
+export default StarsListStory;
 
 export const Default = ({ rating }) => {
 	return <StarsList stars={rating} />;
