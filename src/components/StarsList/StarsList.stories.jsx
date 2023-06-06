@@ -6,7 +6,7 @@ export default {
 	component: StarsList,
 	tags: ["autodocs"],
 	parameters: {
-		layout: "fullscreen",
+		layout: "centered",
 	},
 	args: {
 		rating: 0,

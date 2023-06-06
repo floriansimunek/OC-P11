@@ -5,7 +5,7 @@ export default {
 	component: Tag,
 	tags: ["autodocs"],
 	parameters: {
-		layout: "fullscreen",
+		layout: "centered",
 	},
 	args: {
 		name: "Test",

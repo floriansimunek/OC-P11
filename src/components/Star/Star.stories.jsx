@@ -6,7 +6,7 @@ export default {
 	component: Star,
 	tags: ["autodocs"],
 	parameters: {
-		layout: "fullscreen",
+		layout: "centered",
 	},
 	args: {
 		isActive: false,
