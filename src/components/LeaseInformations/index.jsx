@@ -27,7 +27,7 @@ export default function LeaseInformations({ lease, TAGS, DROP_DOWNS }) {
 				<div className={styles.right}>
 					<div className={styles.top}>
 						<p className={styles.owner}>{lease.host.name}</p>
-						<img src={lease.host.picture} className={styles.profilePicture}></img>
+						<img src={lease.host.picture} className={styles.profilePicture} alt="Host"></img>
 					</div>
 					<div className={styles.bot}>
 						<StarsList stars={lease.rating} />
