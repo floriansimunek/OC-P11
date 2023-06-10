@@ -25,6 +25,7 @@ export default function ImageSlider({ IMAGES }) {
 				<img className={`${styles.chevron} ${styles.chevronLeft}`} src={chevron} alt="Chevron Icon" />
 			</button>
 			<img className={styles.slideImage} src={IMAGES[currentIndex]} alt="Slider Content" />
+			<p className={styles.slideIndex}>{currentIndex + 1 + "/" + IMAGES.length}</p>
 			<button className={`${styles.buttons} ${styles.right}`} onClick={nextSlide}>
 				<img className={styles.chevron} src={chevron} alt="Chevron Icon" />
 			</button>

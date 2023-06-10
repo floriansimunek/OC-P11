@@ -12,6 +12,16 @@
 		object-fit: cover;
 	}
 
+	.slideIndex {
+		position: absolute;
+		left: 50%;
+		bottom: 10px;
+		color: white;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 142.6%;
+	}
+
 	.buttons {
 		position: absolute;
 		top: 50%;
